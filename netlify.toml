@@ -1,0 +1,22 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+
+[dev]
+  command = "npm run dev -- --port 5174"
+  targetPort = 5174
+  port = 5173
+  autoLaunch = false
+
+[[redirects]]
+  from = "/api/generate-words"
+  to = "/.netlify/functions/generate-words"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
