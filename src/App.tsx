@@ -194,16 +194,16 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(255,209,102,0.55),transparent_30%),linear-gradient(145deg,#fff8ed_0%,#fffaf6_44%,#f1fff8_100%)]">
+    <div className="app-shell min-h-screen overflow-hidden">
       <Header />
 
-      <main className="mx-auto w-full max-w-6xl px-4 pb-10 sm:px-6 lg:px-8">
-        <section className="grid gap-4 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:items-start">
-          <div className="rounded-[2rem] bg-white/75 p-4 shadow-soft ring-1 ring-white sm:p-6">
-            <div className="mb-4">
+      <main className="mx-auto w-full max-w-7xl px-4 pb-12 sm:px-6 lg:px-8 lg:pb-16">
+        <section className="grid gap-5 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:items-start">
+          <div className="glass-card-strong rounded-[2rem] p-5 transition hover:-translate-y-0.5 sm:rounded-[2.25rem] sm:p-7 lg:sticky lg:top-6">
+            <div className="mb-5">
               <p className="text-sm font-bold text-party-coral">输入主题生成词库</p>
-              <h2 className="mt-1 text-2xl font-black text-party-ink">
-                一句话开局，马上能玩
+              <h2 className="mt-2 text-2xl font-black leading-tight text-party-ink sm:text-3xl">
+                一句话成逛三园大神
               </h2>
             </div>
             <ThemeInput
@@ -212,13 +212,13 @@ const App = () => {
               onSubmit={() => generate()}
               isGenerating={isGenerating}
             />
-            <div className="mt-4 flex flex-wrap gap-2 text-sm text-stone-500">
+            <div className="mt-5 flex flex-wrap gap-2 text-sm text-stone-500">
               {["动物", "口红品牌", "中国省份", "啤酒品牌"].map((item) => (
                 <button
                   type="button"
                   key={item}
                   onClick={() => handleThemeSelect(item)}
-                  className="rounded-full bg-amber-50 px-3 py-1.5 font-semibold text-stone-700 ring-1 ring-amber-100 transition hover:bg-amber-100"
+                  className="premium-chip min-h-10 px-4 text-sm font-semibold text-stone-700 hover:text-party-ink"
                 >
                   {item}
                 </button>
@@ -242,12 +242,12 @@ const App = () => {
         />
       </main>
 
-      <footer className="border-t border-amber-100/80 bg-white/60 px-4 py-6 text-center text-sm font-semibold text-stone-600">
+      <footer className="border-t border-white/60 bg-white/35 px-4 py-7 text-center text-sm font-semibold text-stone-500 backdrop-blur-2xl">
         适合聚会、团建、课堂、酒桌、直播互动
       </footer>
 
       <div
-        className={`fixed left-1/2 top-4 z-50 -translate-x-1/2 rounded-full bg-party-ink px-5 py-3 text-sm font-bold text-white shadow-soft transition ${
+        className={`fixed left-1/2 top-4 z-50 -translate-x-1/2 rounded-full bg-party-ink/95 px-5 py-3 text-sm font-bold text-white shadow-[0_18px_46px_rgba(15,23,42,0.22)] backdrop-blur-xl transition ${
           toast ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"
         }`}
         role="status"

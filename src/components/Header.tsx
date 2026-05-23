@@ -25,27 +25,27 @@ const TumblerIcon = () => (
 );
 
 const Header = () => (
-  <header className="mx-auto flex w-full max-w-6xl flex-col gap-5 px-4 pb-5 pt-6 sm:px-6 lg:px-8 lg:pt-10">
-    <div className="flex flex-wrap items-center gap-1.5 text-xs font-semibold text-party-coral sm:gap-2 sm:text-sm">
-      <span className="inline-flex items-center gap-1.5 rounded-full bg-white/80 px-2.5 py-1.5 shadow-sm ring-1 ring-black/5 sm:gap-2 sm:px-3">
+  <header className="fade-slide-up mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 pb-7 pt-6 sm:px-6 lg:px-8 lg:pb-10 lg:pt-12">
+    <div className="flex flex-wrap items-center gap-2 text-xs font-semibold sm:text-sm">
+      <span className="premium-badge text-party-coral">
         <PartyPopper className="h-3.5 w-3.5 sm:h-4 sm:w-4" aria-hidden="true" />
         聚会小游戏助手
       </span>
-      <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1.5 text-party-mint ring-1 ring-emerald-100 sm:gap-2 sm:px-3">
+      <span className="premium-badge text-party-mint">
         🐟 小鱼
       </span>
-      <span className="inline-flex items-center gap-1.5 rounded-full bg-violet-50 px-2.5 py-1.5 text-party-grape shadow-sm ring-1 ring-violet-100 sm:gap-2 sm:px-3">
+      <span className="premium-badge text-party-grape">
         <TumblerIcon />
         不倒翁阿奇
       </span>
     </div>
 
-    <div className="max-w-3xl">
-      <h1 className="text-4xl font-black tracking-normal text-party-ink sm:text-5xl">
+    <div className="max-w-4xl">
+      <h1 className="bg-gradient-to-br from-[#17120b] via-[#2d2418] to-[#7c4b18] bg-clip-text text-5xl font-black tracking-normal text-transparent sm:text-6xl lg:text-7xl">
         逛三园生成器
       </h1>
-      <p className="mt-3 text-base leading-7 text-stone-700 sm:text-lg">
-        输入一个主题，马上生成能玩的词库；想不到主题，也可以直接从灵感库里选。
+      <p className="mt-4 max-w-3xl text-base leading-8 text-[#584532] sm:text-xl sm:leading-9">
+        输入一个主题，马上生成可以偷偷摸摸使用的词库了；想不到主题，也可以直接从灵感库里选。
       </p>
     </div>
   </header>
