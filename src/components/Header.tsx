@@ -1,4 +1,28 @@
-import { BadgeCheck, PartyPopper, Sparkles } from "lucide-react";
+import { PartyPopper } from "lucide-react";
+
+const TumblerIcon = () => (
+  <svg
+    className="h-3.5 w-3.5 sm:h-4 sm:w-4"
+    viewBox="0 0 16 16"
+    fill="none"
+    aria-hidden="true"
+  >
+    <circle cx="8" cy="4.2" r="1.8" stroke="currentColor" strokeWidth="1.5" />
+    <path
+      d="M4.6 9.6c0-2 1.5-3.3 3.4-3.3s3.4 1.3 3.4 3.3c0 2.2-1.5 3.9-3.4 3.9s-3.4-1.7-3.4-3.9Z"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.5"
+    />
+    <path
+      d="M6.4 12.9c.5.3 1 .4 1.6.4s1.1-.1 1.6-.4"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeWidth="1.5"
+    />
+  </svg>
+);
 
 const Header = () => (
   <header className="mx-auto flex w-full max-w-6xl flex-col gap-5 px-4 pb-5 pt-6 sm:px-6 lg:px-8 lg:pt-10">
@@ -8,11 +32,10 @@ const Header = () => (
         聚会小游戏助手
       </span>
       <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1.5 text-party-mint ring-1 ring-emerald-100 sm:gap-2 sm:px-3">
-        <Sparkles className="h-3.5 w-3.5 sm:h-4 sm:w-4" aria-hidden="true" />
-        即点即玩
+        🐟 小鱼
       </span>
       <span className="inline-flex items-center gap-1.5 rounded-full bg-violet-50 px-2.5 py-1.5 text-party-grape shadow-sm ring-1 ring-violet-100 sm:gap-2 sm:px-3">
-        <BadgeCheck className="h-3.5 w-3.5 sm:h-4 sm:w-4" aria-hidden="true" />
+        <TumblerIcon />
         不倒翁阿奇
       </span>
     </div>
