@@ -22,8 +22,12 @@ const AI_ERROR_MESSAGE = "生成失败了，可以换一个更常见的主题再
 
 const copyToClipboard = async (text: string) => {
   if (navigator.clipboard?.writeText) {
-    await navigator.clipboard.writeText(text);
-    return;
+    try {
+      await navigator.clipboard.writeText(text);
+      return;
+    } catch {
+      // 部分内嵌浏览器会暴露 clipboard API，但拒绝写入权限。
+    }
   }
 
   const textarea = document.createElement("textarea");
