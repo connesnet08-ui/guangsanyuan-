@@ -20,18 +20,12 @@ const normalizeTheme = (theme: string) =>
     .trim()
     .toLowerCase()
     .replace(/\s+/g, "")
-    .replace(/[，。,.、/\\|_-]/g, "");
+    .replace(/[，。,.、/\\|_+\-=：:；;！!？?（）()【】[\]《》<>“”"'`~]/g, "");
 
 const matchesBank = (input: string, bank: WordBank) => {
   const normalizedNames = bank.names.map(normalizeTheme);
 
-  return normalizedNames.some((name) => {
-    if (!input || !name) {
-      return false;
-    }
-
-    return input === name || input.includes(name) || name.includes(input);
-  });
+  return normalizedNames.some((name) => Boolean(input && name && input === name));
 };
 
 export const shuffleWords = (words: string[]) =>

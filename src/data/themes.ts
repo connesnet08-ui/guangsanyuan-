@@ -15,7 +15,7 @@ export type InspirationCategory = {
 export const wordBanks: WordBank[] = [
   {
     id: "animals",
-    names: ["动物", "动物园", "动物类", "动物名称"],
+    names: ["动物", "动物园", "动物类", "动物名称", "动物词库", "动物园词库"],
     title: "动物园词库",
     words: [
       "马",
@@ -55,7 +55,7 @@ export const wordBanks: WordBank[] = [
   },
   {
     id: "fruits",
-    names: ["水果", "水果类", "水果名称"],
+    names: ["水果", "水果类", "水果名称", "水果词库"],
     title: "水果园词库",
     words: [
       "苹果",
@@ -92,7 +92,7 @@ export const wordBanks: WordBank[] = [
   },
   {
     id: "china-provinces",
-    names: ["中国省份", "省份", "省市", "中国城市省份", "中国地区"],
+    names: ["中国省份", "省份", "省市", "中国城市省份", "中国地区", "中国省份词库"],
     title: "中国省份词库",
     words: [
       "北京",
@@ -133,7 +133,15 @@ export const wordBanks: WordBank[] = [
   },
   {
     id: "china-dynasties",
-    names: ["中国朝代", "朝代", "朝代名称", "历代王朝", "中国王朝", "古代朝代"],
+    names: [
+      "中国朝代",
+      "朝代",
+      "朝代名称",
+      "历代王朝",
+      "中国王朝",
+      "古代朝代",
+      "中国朝代词库",
+    ],
     title: "中国朝代词库",
     words: [
       "夏",
