@@ -3,6 +3,8 @@ dist
 .env
 .env.local
 .netlify
+.wrangler
+.dev.vars
 .vercel
 deno.lock
 .DS_Store
